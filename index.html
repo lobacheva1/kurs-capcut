@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Рилс, за который платят</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{--bg:#050505;--card:#0f0e0c;--card2:#15130f;--line:#2a251a;--line2:#3d3520;--tx:#eae5d8;--mu:#9b937f;--gold:#e9b949;--gold2:#f7d98a;--green:#2fd68f;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Manrope',system-ui,sans-serif;font-size:17px;line-height:1.6;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+.wrap{max-width:1000px;margin:0 auto}
+section{padding-block:clamp(36px,6vw,72px);border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.lab{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+h1,h2,h3{font-family:'Unbounded',sans-serif;margin:0;line-height:1.15;text-wrap:balance}
+h1{font-size:clamp(28px,5vw,54px);letter-spacing:-.02em;font-weight:700}
+h1 em,h2 em{font-style:normal;color:var(--gold)}
+h2{font-size:clamp(22px,3.2vw,34px);font-weight:700;margin-bottom:22px}
+h3{font-size:17px;font-weight:500;margin-bottom:8px}
+p{margin:0 0 14px}
+.lead{font-size:clamp(17px,1.8vw,20px);color:#cfc9b8;max-width:680px}
+.mu{color:var(--mu)}
+.btn{display:inline-block;background:var(--gold);color:#050505;font-weight:700;text-decoration:none;padding:16px 30px;border-radius:12px;min-height:48px}
+.btn:hover{background:var(--gold2)}
+.row{display:flex;flex-wrap:wrap;gap:14px}
+.card{flex:1 1 260px;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card p{margin:0;color:#cfc9b8;font-size:16px}
+.card.g{border-color:var(--line2);background:var(--card2)}
+.pill{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gold);border:1px solid var(--line2);border-radius:999px;padding:4px 12px;margin:0 8px 8px 0}
+.num{font-family:'JetBrains Mono',monospace;color:var(--gold);font-size:14px}
+.lesson{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;flex:1 1 300px;min-width:0}
+.lesson b{font-weight:700}
+.lesson span.d{display:block;color:var(--mu);font-size:15px}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.steps li{display:flex;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.steps .n{flex:none;width:38px;height:38px;border-radius:50%;background:var(--gold);color:#050505;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace}
+.steps li div{min-width:0}
+.note{background:var(--card2);border:1px solid var(--line2);border-radius:14px;padding:18px 20px;color:#cfc9b8;margin-top:18px}
+.note b{color:var(--gold2)}
+.price{font-family:'Unbounded',sans-serif;font-weight:700;font-size:clamp(44px,8vw,84px);line-height:1;color:var(--gold);letter-spacing:-.02em}
+.badge{display:inline-block;background:var(--gold);color:#050505;font-weight:700;font-size:13px;padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.kw{display:inline-block;font-family:'JetBrains Mono',monospace;background:var(--gold);color:#050505;padding:2px 12px;border-radius:8px}
+.gift{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:baseline}
+.gift s{text-decoration:none;color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:13px;border:1px solid var(--line2);border-radius:999px;padding:2px 12px;white-space:nowrap}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 20px;margin-bottom:10px}
+summary{cursor:pointer;padding:16px 0;font-weight:700;list-style:none;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--gold);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:#cfc9b8;font-size:16px}
+.tl{background:#0b0a08;border:1px solid var(--line2);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px;margin-top:30px;position:relative}
+.tr{display:flex;align-items:center;gap:10px}
+.tr i{font-style:normal;width:68px;flex:none;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--mu)}
+.tr div{flex:1;min-width:0;display:flex;gap:4px;height:34px}
+.tr span{border-radius:7px;font-size:clamp(10px,2.4vw,12px);line-height:34px;padding:0 7px;color:#050505;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;background:var(--gold)}
+.tr span.b{background:var(--gold2)}
+.tr span.e{background:transparent}
+.ph{position:absolute;top:0;bottom:0;left:44%;width:2px;background:var(--green)}
+footer{padding-block:36px;border-top:1px solid var(--line);color:var(--mu);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section>
+<p class="lab">Фокус-группа · 20 мест</p>
+<h1>Научитесь делать видео, <em>за которые платят</em></h1>
+<p class="lead" style="margin-top:22px"><strong style="font-weight:700;color:var(--tx)">Просто, коротко и с нуля</strong></p>
+<p class="lead" style="margin-top:0">Пару вечеров на обучение монтажу на телефоне, одну-две недели на портфолио и первый заказ у вас в руках!</p>
+<p style="margin-top:26px"><a class="btn" href="#price" style="text-transform:uppercase;font-size:19px;letter-spacing:.04em;padding:20px 40px">Занять место</a></p>
+<p class="mu" style="font-size:15px">11 практических уроков и 4 бонусных · всего около 2 часов · только телефон и бесплатный CapCut</p>
+<div class="tl" aria-hidden="true">
+<div class="tr"><i>ВИДЕО</i><div><span style="width:11%">нарезка</span><span class="b" style="width:19%">цепляющее начало</span><span style="width:10%">вставки</span><span class="b" style="width:12%">переходы</span><span style="width:18%">удаление фона</span><span class="b" style="width:12%">фильтры</span><span style="flex:1">цвет</span></div></div>
+<div class="tr"><i>ТЕКСТ</i><div><span class="e" style="width:3%"></span><span class="b" style="width:25%">шрифтовые пары</span><span style="width:22%">автосубтитры</span><span class="b" style="width:24%">анимация текста</span><span style="flex:1">акценты</span></div></div>
+<div class="tr"><i>ЗВУК</i><div><span style="width:50%">музыка</span><span class="b" style="flex:1">звуковые эффекты</span></div></div>
+<div class="ph"></div>
+</div>
+<div class="note" style="margin-top:16px"><b>Бонусом: мои секреты по заработку.</b> Где искать заказы, сколько брать и как договариваться об оплате и правках.</div>
+</section>
+
+<section>
+<p class="lab">Знакомо?</p>
+<h2>Хотите, чтобы ваши видео приносили внимание и деньги, но <em>что-то мешает начать?</em></h2>
+<div class="row">
+<div class="card"><p>«Хочу вести блог, но мне не нравится, как выглядит мой контент».</p><p style="color:#e9b949;margin-top:10px">Я учу делать чисто, стильно и естественно, но с динамикой и акцентами. Картинка получается такой, какую вы видите у меня.</p></div>
+<div class="card"><p>«Мне нужна подработка на 2–3 часа в день».</p><p style="color:#e9b949;margin-top:10px">После курса и отработки материала вы можете спокойно уделять этому по 2–3 часа в день и делать по 1–2 заказа в сутки. Монтаж роликов идеально подходит вам для этого.</p></div>
+<div class="card"><p>«Сохраняю ролики „как снять тренд“, а до них не доходят руки».</p><p style="color:#e9b949;margin-top:10px">Без базы новая информация только отталкивает. Освойте основу один раз, и любые разборы трендов начнут работать.</p></div>
+<div class="card"><p>«В CapCut столько кнопок, а технологии так далеко ушли, что страшно даже начинать».</p><p style="color:#e9b949;margin-top:10px">Это курс с нуля. Даже если вы вообще не понимаете, куда нажимать, вы не будете чувствовать себя глупо: я показываю каждый шаг на экране. Берём только основные функции, остальные отметаем, и я объясняю почему.</p></div>
+<div class="card"><p>«Не люблю монтаж, меня от него тошнит».</p><p style="color:#e9b949;margin-top:10px">Тошнит, потому что вы не знаете, на что нажимать и какую ценность даёт монтаж: как с его помощью усилить ролик. Нас всегда тошнит от нового, оно кажется сложным. Разберётесь, и это пройдёт.</p></div>
+</div>
+</section>
+
+<section>
+<p class="lab">Кому подойдёт</p>
+<h2>Кому подойдёт <em>этот курс?</em></h2>
+<div class="row">
+<div class="card"><h3>Тем, кто хочет найти удалённую подработку</h3><p>Монтаж идеально вам в этом подойдёт. Вы сможете тратить 2–3 часа в день, и вам для этого понадобится только телефон.</p></div>
+<div class="card"><h3>Тем, кто хочет обрести новую профессию</h3><p>Вы осваиваете навык с нуля, собираете портфолио и идёте за первыми заказами.</p></div>
+<div class="card"><h3>Тем, кто хочет вести блог</h3><p>Вы сможете собрать видео из материала, который у вас уже есть, и понять, как создаётся контент.</p></div>
+<div class="card"><h3>Блогерам</h3><p>Если хочется поднять качество своего контента. Ролики станут динамичнее и заметнее.</p></div>
+<div class="card"><h3>Экспертам</h3><p>Если команды пока нет, а контент хочется улучшить, чтобы он привлекал нужную аудиторию.</p></div>
+<div class="card"><h3>UGC-креаторам</h3><p>Видео помогают находить более привлекательные заказы и получать больше сотрудничеств с брендами.</p></div>
+</div>
+<div class="note">Курс не про сценарии и свет. Он про то, как собрать видео из материала, который у вас уже есть. Всему учиться сразу не нужно.</div>
+</section>
+
+<section>
+<p class="lab">Что вы получаете</p>
+<h2>Готовый рилс в портфолио <em>и первый заказ</em></h2>
+<figure style="margin:22px auto 26px;max-width:340px;text-align:center">
+<video src="lesson-video.mp4#t=0.1" controls playsinline preload="metadata" style="display:block;width:100%;max-width:100%;aspect-ratio:9/16;background:#000;border-radius:16px;border:1px solid rgba(233,185,73,.35)"></video>
+<figcaption class="mu" style="margin-top:12px;font-size:15px">Этот ролик мы разбираем на курсе по шагам. Такой же вы соберёте на своём видео: с цепляющим началом, субтитрами, вставками и звуком.</figcaption>
+</figure>
+<div class="row">
+<div class="card g"><span class="num">ПАРА ВЕЧЕРОВ</span><h3 style="margin-top:8px">Осваиваете материал</h3><p>Смотрите уроки и монтируете свой ролик параллельно. К концу курса у вас готов первый рилс.</p></div>
+<div class="card g"><span class="num">7–14 ДНЕЙ ПРАКТИКИ</span><h3 style="margin-top:8px">Начинаете зарабатывать</h3><p>Делаете ещё несколько роликов, кладёте их в портфолио и откликаетесь на заказы. Сколько уйдёт именно у вас, зависит от вашей скорости.</p></div>
+</div>
+<div class="note"><b>Честно о сроках.</b> Освоить материал за два вечера реально. Заработать за два вечера нельзя: нужно сделать несколько роликов в портфолио.</div>
+</section>
+
+<section>
+<p class="lab">Как всё будет</p>
+<h2>Три шага <em>от нуля до первого заказа</em></h2>
+<ol class="steps">
+<li><span class="n">1</span><div><h3>Записываетесь в фокус-группу</h3><p class="mu" style="margin:0">Оплачиваете вход и присылаете мне в Telegram скрин оплаты, ФИО и ваш ник в Telegram. Я вручную добавляю вас в закрытый канал с уроками.</p></div></li>
+<li><span class="n">2</span><div><h3>Проходите уроки и сразу монтируете</h3><p class="mu" style="margin:0">Берёте своё разговорное видео и делаете с ним всё то же, что я показываю на экране. Теория сразу превращается в практику.</p></div></li>
+<li><span class="n">3</span><div><h3>Собираете портфолио и ищете заказы</h3><p class="mu" style="margin:0">Делаете несколько роликов, а урок «Заработок» подсказывает, где искать клиентов, сколько брать и как договариваться об оплате и правках.</p></div></li>
+</ol>
+<div class="note"><b>Доступ и обратная связь.</b> Доступ к курсу и его обновлениям остаётся у вас навсегда. Но если хотите получить обратную связь от меня, нужно пройти курс за 1 месяц.</div>
+</section>
+
+<section>
+<p class="lab">Программа</p>
+<h2>9 этапов <em>одного ролика</em></h2>
+<p class="lead" style="margin-bottom:24px">Вы монтируете разговорный рилс. Это самый сложный формат, поэтому по пути проходите почти все базовые функции CapCut.</p>
+<div class="row">
+<div class="lesson"><span class="num">01</span><div><b>Интерфейс, нарезка, переходы</b><span class="d">Скорость, чистка пауз и слов-паразитов.</span></div></div>
+<div class="lesson"><span class="num">02</span><div><b>Рамка и хук</b><span class="d">Как оформить начало ярко и динамично: анимация видео и текста, шрифтовые пары, звук. В начале динамики больше, потом спокойнее.</span></div></div>
+<div class="lesson"><span class="num">03</span><div><b>Наложения, маска, хромакей</b><span class="d">Вставки, закруглённые углы, зелёный фон.</span></div></div>
+<div class="lesson"><span class="num">04</span><div><b>Автосубтитры и анимации</b><span class="d">Шрифты, фирменный цвет клиента, анимация текста.</span></div></div>
+<div class="lesson"><span class="num">05</span><div><b>Ключевые фразы</b><span class="d">Акценты, которые читаются с первого взгляда.</span></div></div>
+<div class="lesson"><span class="num">06</span><div><b>Саунд-дизайн</b><span class="d">Эффекты, музыка и безопасные лицензии.</span></div></div>
+<div class="lesson"><span class="num">07</span><div><b>Цветокор, стикеры, ретушь</b><span class="d">Единый цвет во всех кадрах.</span></div></div>
+<div class="lesson"><span class="num">08</span><div><b>Ключевые кадры</b><span class="d">Свои анимации и плавный зум.</span></div></div>
+<div class="lesson"><span class="num">09</span><div><b>Экспорт</b><span class="d">Разрешение и частота кадров для Instagram.</span></div></div>
+</div>
+</section>
+
+<section>
+<p class="lab">Бонусы и материалы</p>
+<h2>Что ещё <em>входит в курс</em></h2>
+<div class="row">
+<div class="card g"><div class="gift"><h3>Бонус: закадровая озвучка</h3><s>в подарок</s></div><p>Монтаж на голос, когда видео нет. Клиенты заказывают такой формат часто.</p></div>
+<div class="card g"><div class="gift"><h3>Урок «Заработок»</h3><s>в подарок</s></div><p>Что положить в портфолио, где искать заказы, сколько брать, как договариваться об оплате и правках.</p></div>
+<div class="card g"><h3>Материалы для уроков</h3><p>Плёнки для переходов, шрифтовые пары, стикеры, звуки и скрины настроек.</p></div>
+<div class="card g"><div class="gift"><h3>Список Telegram-чатов</h3><s>в подарок</s></div><p>Где ищут монтажёров. Не придётся искать площадки самим.</p></div>
+</div>
+<div class="note" style="margin-top:26px"><b>Сколько платят за ролик до 1,5 минуты (мой опыт, не обещание).</b><br><span style="display:block;height:12px"></span>
+<span class="pill">500–800 ₽ первые заказы</span><span class="pill">1000–1500 ₽ самая частая цена</span><span class="pill">2000–2500 ₽ когда есть скорость</span><span class="pill">3000–5000 ₽ когда есть насмотренность, скорость и креативность</span></div>
+</section>
+
+<section id="price">
+<p class="lab">Сколько стоит</p>
+<span class="badge">Первый поток · 20 мест</span>
+<div class="price">1490 ₽</div>
+<p class="lead" style="margin-top:18px">Это фокус-группа. Я беру 20 человек, чтобы уделить больше внимания каждому.</p>
+<p class="lead">Доступ к курсу и его обновлениям остаётся у вас навсегда. Чтобы получить обратную связь от меня, пройдите курс за 1 месяц.</p>
+<p class="lead">После оплаты пришлите мне в Telegram: <b>скрин оплаты, ФИО и ваш ник в Telegram</b>. Я добавлю вас в закрытый канал вручную, обычно в течение дня.</p>
+<p class="lead">Взамен прошу честную обратную связь: что было понятно, где вы застряли, чего не хватило. По ней я доработаю курс.</p>
+<p class="lead" style="margin-top:26px">Чтобы занять место, напишите мне слово <span class="kw">монтаж</span>:</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:6px">
+<a class="btn" href="https://t.me/KaterinaLB" target="_blank" rel="noopener">Написать в Telegram</a>
+<a class="btn" href="https://ig.me/m/katya_lobacheva" target="_blank" rel="noopener">Написать в Instagram</a>
+</div>
+</section>
+
+<section>
+<p class="lab">Кто ведёт</p>
+<h2>Я Катя, <em>монтирую и снимаю UGC</em></h2>
+<p class="lead">Монтирую рилс для клиентов и снимаю UGC для брендов. Всё, что в курсе, я использую в работе. Если появятся вопросы во время обучения, пишите мне, и мы разберёмся.</p>
+<p style="margin-top:22px"><a class="btn" href="https://t.me/+nyKKew8Xepc4MDEy" target="_blank" rel="noopener">Моё портфолио</a></p>
+</section>
+
+<section>
+<p class="lab">Частые вопросы</p>
+<h2>Часто задаваемые <em>вопросы</em></h2>
+<details><summary>Нужен ли компьютер?</summary><p>Нет. Всё делаем на телефоне в приложении CapCut.</p></details>
+<details><summary>Какой нужен телефон: iPhone или Android?</summary><p>Подойдёт и iPhone, и Android: приложение CapCut есть на обоих. Функции, которые мы проходим, одинаковы в обеих версиях.</p></details>
+<details><summary>Нужна ли платная версия CapCut?</summary><p>Для старта хватает бесплатной. В курсе есть отдельный короткий урок о платной версии.</p></details>
+<details><summary>Я совсем новичок. Получится?</summary><p>Да. Уроки идут по шагам, и вы повторяете за мной на своём видео.</p></details>
+<details><summary>Правда ли, что можно заработать за 7–14 дней?</summary><p>Это мой ориентир при регулярной практике. Он зависит от вашей скорости и от того, как быстро вы сделаете несколько роликов в портфолио.</p></details>
+<details><summary>Почему такая цена?</summary><p>Это первый поток для 20 человек. Мне важна ваша обратная связь, чтобы улучшить курс.</p></details>
+</section>
+
+<section id="cta" style="text-align:left">
+<p class="lab">Занять место</p>
+<h2>Напишите мне слово <span class="kw">монтаж</span></h2>
+<p class="lead">Я отправлю реквизиты и ссылку на закрытый канал с уроками. Мест всего 20.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:22px">
+<a class="btn" href="https://t.me/KaterinaLB" target="_blank" rel="noopener">Написать в Telegram</a>
+<a class="btn" href="https://ig.me/m/katya_lobacheva" target="_blank" rel="noopener">Написать в Instagram</a>
+</div>
+<p class="mu" style="margin-top:36px;font-size:14px">Мой Instagram: <a href="https://www.instagram.com/katya_lobacheva?igsh=MXhzdWI5bGw3OHB3aA%3D%3D&utm_source=qr" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px">@katya_lobacheva</a></p>
+</section>
+
+<footer>Катя Лобачёва · UGC и монтаж рилс</footer>
+</div>
+</body>
+</html>
